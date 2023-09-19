@@ -1,5 +1,5 @@
+import { ScreenProps } from "@navigation/RootStackNavigation";
 import { Button, Text, View } from "react-native";
-import { ScreenProps } from "../navigation/RootStackNavigation";
 const HomeScreen = ({navigation,name}:ScreenProps)=>{
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

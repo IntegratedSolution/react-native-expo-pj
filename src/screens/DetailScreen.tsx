@@ -1,5 +1,5 @@
+import { ScreenProps } from "@navigation/RootStackNavigation";
 import { Button, Text, View } from "react-native";
-import { ScreenProps } from "../navigation/RootStackNavigation";
 
 const DetailScreen=({route,name,age}:ScreenProps)=> {
     return (

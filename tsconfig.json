@@ -6,8 +6,9 @@
     "baseUrl": ".",
     "paths": {
       // This needs to be mirrored in babel.config.js
-      "screens/*": ["src/screens/*"],
-      "src/*": ["src/*"]
+      "@src/*": ["src/*"],
+      "@screens/*": ["src/screens/*"],
+      "@navigation/*": ["src/navigation/*"],
     }
   }
 }
