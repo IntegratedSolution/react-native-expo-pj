@@ -33,9 +33,11 @@ const RootStackNavigation = ({globalProps}:{globalProps: GlobalProps})=>{
                 />
             </Stack.Navigator> */}
             <Tab.Navigator
+             
              screenOptions={({ route }) => ({
+                tabBarLabel:route.name,
                 tabBarIcon: ({ focused, color, size }) => {
-                  let iconName;
+                  let iconName : string = '';
       
                   if (route.name === 'Home') {
                     iconName = focused
@@ -48,7 +50,7 @@ const RootStackNavigation = ({globalProps}:{globalProps: GlobalProps})=>{
                   // You can return any component that you like here!
                   return <Ionicons 
                     name={iconName}
-                    size={size} 
+                    size={focused?35:28} 
                     color={color} 
                   />;
                 },
@@ -63,7 +65,7 @@ const RootStackNavigation = ({globalProps}:{globalProps: GlobalProps})=>{
                 />
                 <Tab.Screen 
                 name="Detail" 
-                component={(props:StackScreenProps<RootStackParamList>)=><DetailScreen {...props} {...globalProps}/>} 
+                component={(props:StackScreenProps<RootStackParamList>)=><DetailScreen {...props}/>} 
                 />
       </Tab.Navigator>
         </NavigationContainer>
