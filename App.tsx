@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
+import * as React from 'react';
+import RootStackNavigation from './src/navigation/RootStackNavigation';
+export type GlobalProps= {
+  name: string;
+  age: number;
+}
+const App=()=> {
+  const name = "Arrkar";
+  const globalProps : GlobalProps = {
+    name,
+    age:300
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <RootStackNavigation globalProps={globalProps}/>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
